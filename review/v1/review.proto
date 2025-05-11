@@ -136,7 +136,7 @@ message AppealReviewReply{
 //o端
 message AuditReviewRequest {
 	int64 reviewID = 1 [(validate.rules).int64 = {gt: 0}];
-	int32 status = 2 [(validate.rules).enum = {defined_only: true}];
+	int32 status = 2 [(validate.rules).int32 = {gt: 0}];
 	string opUser = 3 [(validate.rules).string = {min_len: 2}];
 	string opReason = 4 [(validate.rules).string = {min_len: 2}];
 	optional string opRemarks = 5;
